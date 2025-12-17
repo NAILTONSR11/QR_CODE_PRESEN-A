@@ -29,7 +29,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "pages")));
 
 
-app.use("/api/users", userRoutes);
+app.use("/user", userRoutes);
 
 // Servir CSS e JS
 app.use("/js", express.static(path.join(__dirname, "api", "ui", "js")));

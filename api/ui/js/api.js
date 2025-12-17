@@ -1,9 +1,9 @@
-/* const API_URL = "http://localhost:3000/api/user"; */
+const baseURL = window.location.origin; // pega http://localhost:3000 ou https://seuapp.onrender.com
 
 const api = {
     async listarT() {
         try {
-            const res = await fetch("http://localhost:3000/user");
+            const res = await fetch(`${baseURL}/user`);
             return await res.json();
         } catch (error) {
             console.error("API - Erro ao listar Pessoas!", error);
@@ -13,7 +13,7 @@ const api = {
 
     async cadastrarUser(dados) {
         try {
-                const res = await fetch("http://localhost:3000/user", {
+            const res = await fetch(`${baseURL}/user`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(dados)
@@ -27,7 +27,7 @@ const api = {
 
     async cadastrarUserall(dados) {
         try {
-                const res = await fetch("http://localhost:3000/user/all", {
+            const res = await fetch(`${baseURL}/user/all`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(dados)
@@ -41,9 +41,9 @@ const api = {
 
     async excluirTodosUsuarios() {
         try {
-            const res = await fetch("http://localhost:3000/user/all", {
+            const res = await fetch(`${baseURL}/user/all`, {
                 method: "DELETE",
-                headers: { "Content-Type": "application/json" } // opcional, mas não faz mal
+                headers: { "Content-Type": "application/json" }
             });
             return await res.json();
         } catch (error) {
@@ -52,26 +52,13 @@ const api = {
         }
     },
 
-/*     async buscarColaborador(matricula) {
-        try {
-            const res = await fetch(`http://localhost:3000/api/user?matricula=${matricula}`);
-            return await res.json();
-        } catch (error) {
-            console.error("API - Erro ao buscar colaborador!", error);
-            throw error;
-        }
-    }, */
-
     async atualizaStatus(id, dados) {
         try {
-            const res = await fetch(`http://localhost:3000/user/${id}`, {
+            const res = await fetch(`${baseURL}/user/${id}`, {
                 method: "PUT",
-                headers: {
-                    "Content-Type": "application/json"
-                },
+                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(dados)
             });
-
             return await res.json();
         } catch (error) {
             console.error("Erro na API ao atualizar status:", error);
@@ -80,10 +67,9 @@ const api = {
     },
 
     async buscarColaborador(matricula) {
-    return fetch(`http://localhost:3000/user/${matricula}`)
-    .then(res => res.json());
-}
-
+        const res = await fetch(`${baseURL}/user/${matricula}`);
+        return res.json();
+    }
 };
 
 export default api;

@@ -1,0 +1,175 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: #f4f6fa;
+    padding: 30px;
+}
+
+.page {
+  display: grid;
+  gap: 25px;
+  justify-items: center;
+}
+
+/* ---------------------- */
+/* CARD SCANNER */
+/* ---------------------- */
+
+.scanner-card {
+    background: #fff;
+    width: 100%;
+    border-radius: 12px;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.scanner-header {
+    background: #394c8a;
+    color: white;
+    padding: 18px;
+    font-size: 18px;
+    border-radius: 12px 12px 0 0;
+}
+
+.alert-warning {
+    background: #ff000066;
+    border: 1px solid #f69c9c;
+    color: #a82929;
+    padding: 12px 15px;
+    margin: 20px;
+    border-radius: 6px;
+    font-size: 17px;
+}
+
+/* Caixa do scanner */
+.scanner-box {
+    height: 300px;
+    border: 2px dashed #d3d7e3;
+    margin: 20px;
+    border-radius: 10px;
+    color: #5a6c91;
+    text-align: center;
+    padding-top: 70px;
+}
+
+.cameraArea{
+    width: 100%;
+}
+
+.scanner-icon {
+    font-size: 60px;
+}
+
+.scanner-box h3 {
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+/* Botões */
+.buttons {
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.btn {
+    flex: 1;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn.primary {
+    background: #394c8a;
+    color: white;
+}
+
+.btn.secondary {
+    background: #eef1f8;
+    color: #394c8a;
+    border: 1px solid #c6cce0;
+}
+
+/* Instruções */
+.instructions {
+    margin: 20px;
+    padding: 15px;
+    background: #eef3ff;
+    border-left: 4px solid #6979e0;
+    border-radius: 8px;
+    color: #3d4d91;
+    font-size: 14px;
+}
+
+
+/* ---------------------- */
+/* CARD PRESENTES */
+/* ---------------------- */
+
+.presentes-card {
+    background: white;
+    width: 70%;
+    border-radius: 12px;
+    padding-bottom: 10px;
+    height: fit-content;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.presentes-header {
+    background: #4aa86c;
+    color: white;
+    padding: 12px 15px;
+    margin: 20px;
+    border-radius: 6px;
+    font-size: 18px;
+}
+
+.badge {
+    background: #5c6bd6;
+    padding: 4px 10px;
+    border-radius: 8px;
+}
+
+.pessoa {
+    border-bottom: 1px solid #eee;
+    padding: 15px 18px;
+    position: relative;
+}
+
+.pessoa h4 {
+    font-weight: 600;
+    color: #333;
+}
+
+.pessoa .setor,
+.pessoa .id {
+    display: block;
+    color: #555;
+    font-size: 13px;
+}
+
+.hora {
+    position: absolute;
+    right: 15px;
+    top: 22px;
+    background: #e1f9e5;
+    color: #2e8b57;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.footer-info {
+    padding: 18px;
+    font-size: 14px;
+    text-align: right;
+    color: #444;
+}

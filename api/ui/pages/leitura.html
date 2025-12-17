@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leitor de QR Code</title>
+    <script src="https://cdn.jsdelivr.net/npm/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+    <link rel="stylesheet" href="../styles/leitura.css">
+    <script type="module" src="../js/leitura.js"></script>
+</head>
+<body>
+
+<div class="page">
+
+    <!-- CARD PRINCIPAL DO LEITOR -->
+    <div class="scanner-card">
+
+        <div class="scanner-header">
+            <span>📷 Leitor de QR Code</span>
+        </div>
+
+        <div class="alert-warning" style="display:none;" id="alertaDuplicado">
+            ⚠️ <strong>Nome aqui</strong> - Presença já registrada hoje às <strong>--:--</strong>.
+        </div>
+
+        <!-- ÁREA DO SCANNER -->
+        <div class="scanner-box" id="scannerBox">
+
+            <div class="cameraArea" id="cameraArea"></div>
+
+            <div id="icons_scan">
+                <div class="scanner-icon">📷</div>
+                <h3>Scanner Desativado</h3>
+                <p>Clique no botão abaixo para ativar a câmera e começar a validar QR Codes</p>
+            </div>
+        </div>
+
+        <!-- BOTÕES -->
+        <div class="buttons">
+            <button class="btn primary" id="btnCamera">📷 Ativar Câmera</button>
+        </div>
+
+        <!-- INSTRUÇÕES -->
+        <div class="instructions">
+            <strong>Instruções:</strong>  
+            Peça ao colaborador para apresentar o QR Code gerado no sistema.  
+            Posicione o código dentro da área de leitura até que seja reconhecido automaticamente.
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

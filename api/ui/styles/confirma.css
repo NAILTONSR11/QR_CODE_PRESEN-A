@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6fa;
+    color: #333;
+}
+
+/* ----- HEADER ----- */
+header {
+    width: 100%;
+    background: #fff;
+    padding: 0px 40px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    gap: 20px;
+}
+/* ----- CARD PRINCIPAL ----- */
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.card {
+    background: white;
+    width: 600px;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.card .icon {
+    font-size: 50px;
+    color: #5a6ac9;
+    margin-bottom: 20px;
+}
+
+.card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #223;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+input {
+    width: 65%;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #6777ef;
+}
+
+button {
+    background: #6777ef;
+    padding: 10px 18px;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #5564dd;
+}
+
+/* ----- RESULTADO + BOTÃO ----- */
+.resultado-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 25px;
+}
+
+/* CARD RESULTADO */
+.resultado-card {
+    background: linear-gradient(135deg, #eef5ff, #e4edff);
+    padding: 16px 22px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #4A6CF7;
+    font-size: 15px;
+    color: #333;
+    min-width: 260px;
+    animation: fadeIn 0.4s ease-out;
+    margin-bottom: 15px;
+}
+
+.resultado-card p {
+    margin: 6px 0;
+    font-weight: 500;
+}
+
+/* BOTÃO GERAR QR CODE */
+.btn-qrcode {
+    background: #4A6CF7;
+    color: white;
+    padding: 12px 18px;
+    font-size: 14px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(74,108,247,0.3);
+    transition: 0.3s ease;
+}
+
+.btn-qrcode:hover {
+    background: #364fd1;
+    transform: translateY(-2px);
+}
+
+/* ÁREA DO QR CODE */
+.qrcode-box {
+    margin-top: 25px;
+    /* display: none; */ /* ficará visível depois via JS */
+    justify-content: center;
+    padding: 15px;
+    animation: fadeIn 0.4s ease-out;
+}
+
+/* BOTÃO DE DOWNLOAD */
+.btn-download {
+    margin-top: 12px;
+    background: #0aa84f;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.btn-download:hover {
+    background: #087c3b;
+    transform: translateY(-2px);
+}
+
+
+/* animação */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ----- ALERTA ERRO ----- */
+.alert {
+    margin-top: 20px;
+    background: #ffe5e5;
+    color: #c71f1f;
+    padding: 12px;
+    border-left: 4px solid #e53935;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* ----- AVISO ----- */
+.info-box {
+    background: #eef3ff;
+    padding: 20px;
+    width: 80%;
+    border-radius: 10px;
+    margin: 15px auto;
+    font-size: 14px;
+    color: #4a5bb5;
+    border-left: 4px solid #6979e0;
+}

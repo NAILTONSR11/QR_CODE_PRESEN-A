@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../styles/confirma.css">
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+<script src="../js/confirma.js" type="module"></script>
+
+
+
+
+<title>Confirmação de Presença</title>
+</head>
+<body>
+
+<header>
+    <div style="margin: 0 auto;" class="logo"><img src="../images/ChatGPT Image 16 de dez. de 2025, 00_20_18.png" alt="" width="160"></div>
+</header>
+
+<div class="container">
+    <div class="card">
+        <div class="icon">✔️</div>
+
+        <h2>Sistema de Confirmação de Presença</h2>
+        <p>Informe sua matrícula para confirmar sua presença no evento e sua participação no <strong>Sorteio!</strong></p>
+
+        <div class="form-group">
+            <input type="text" id="inputMatricula" placeholder="Digite sua matrícula">
+            <button id="btnVerificar">Verificar</button>
+        </div>
+
+        <!-- ALERTA -->
+        <div class="alert" style="display: none;">
+            
+        </div>
+
+        <!-- RESULTADO E BOTÃO -->
+        <div id="resultadoWrapper" class="resultado-wrapper" style="display: none" > <!-- style="display: none" -->
+
+            <div id="data-confirm" class="resultado-card">
+<!--                 <p><strong>Nome:</strong> Nailton Rodrigues</p>
+                <p><strong>Setor:</strong> COGEP</p> -->
+            </div>
+
+            <button id="btnConfirmarQr" class="btn-qrcode">
+                Confirmar presença e Gerar QR Code
+            </button>
+
+        </div>
+
+        <!-- ÁREA PARA QR CODE -->
+        <div id="qrcode" class="qrcode-box" style="display: none;" >
+            qrcode aqui
+        </div>
+
+                <!-- BOTÃO DE BAIXAR QR CODE -->
+        <button id="btn-download" class="btn-download" style="display: none;">
+            ⬇️ Baixar QR Code
+        </button>
+
+    </div>
+</div>
+
+<div class="info-box">
+    <strong>Importante:</strong> Guarde o QR Code gerado. Ele será necessário para validar sua entrada no evento e sua Participação no Sorteio. <br>
+    Sistema Institucional FIEMA - Uso exclusivo para colaboradores
+</div>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/listagem.css">
+    <script type="module" src="../js/listagem.js"></script>
+    <title>Listagens</title>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="navbar-left">
+            <div class="logo"><img src="../images/ChatGPT Image 16 de dez. de 2025, 00_20_18.png" alt="" width="120"></div>
+        </div>
+
+        <div class="navbar-center">
+            <h2>Painel Administrativo</h2>
+        </div>
+
+        <div class="navbar-right">
+            <span class="user-icon">👤 Administrador</span>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- DASHBOARD CARDS -->
+        <div class="cards">
+            <div class="card">
+                <div class="card-info">
+                    <span class="card-title">Total Pré-cadastrados</span>
+                    <h3 id="countPreCadastro">0</h3>
+                </div>
+                <div class="card-icon">👥</div>
+            </div>
+
+            <div class="card">
+                <div class="card-info">
+                    <span class="card-title">Confirmados</span>
+                    <h3 id="countConfirmados">0</h3>
+                </div>
+                <div class="card-icon">✔️</div>
+            </div>
+
+            <div class="card">
+                <div class="card-info">
+                    <span class="card-title">Presentes</span>
+                    <h3 class="green" id="countPresentes">0</h3>
+                </div>
+                <div class="card-icon">🟢</div>
+            </div>
+
+            <div class="card">
+                <div class="card-info">
+                    <span class="card-title">Taxa de Presença</span>
+                    <h3 class="gold" id="taxaPresenca">0%</h3>
+                </div>
+                <div class="card-icon">📝</div>
+            </div>
+        </div>
+
+        <!-- CAMPO DE PESQUISA -->
+        <div class="search-box">
+            <input type="text" id="inputBusca" placeholder="Buscar por nome, matrícula, setor ou casa…">
+        </div>
+
+        <!-- ABAS -->
+        <div class="tabs">
+            <button class="tab active" data-tab="todos">Pré-cadastrados</button>
+            <button class="tab" data-tab="confirmados">Confirmados</button>
+            <button class="tab" data-tab="presentes">Presentes</button>
+        </div>
+
+        <!-- LISTAGEM -->
+        <div class="table-card">
+
+            <div class="table-header">
+                <h3 id="tituloTabela">Lista de Pré-cadastrados</h3>
+                <button class="btn-csv" id="btnCsv">⬇️ Baixar CSV</button>
+                <button class="btn-csv" id="btnCsv2">⬇️ Baixar CSV por casa</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Matrícula</th>
+                        <th>Nome</th>
+                        <th>Setor</th>
+                        <th>Email</th>
+                        <th>Casa</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tbodyListagem">
+
+                </tbody>
+
+            </table>
+        </div>
+
+    </main>
+
+
+</body>
+</html>

@@ -26,7 +26,7 @@ app.use(express.json());
 // ==================
 // Arquivos estáticos
 // ==================
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "pages")));
 
 
 app.use("/api/users", userRoutes);

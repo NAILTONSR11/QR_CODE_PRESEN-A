@@ -34,6 +34,7 @@ app.use("/api/users", userRoutes);
 // Servir CSS e JS
 app.use("/js", express.static(path.join(__dirname, "api", "ui", "js")));
 app.use("/styles", express.static(path.join(__dirname, "api", "ui", "styles")));
+app.use("/images", express.static(path.join(__dirname, "api", "ui", "images")));
 
 
 // Rotas amigáveis 

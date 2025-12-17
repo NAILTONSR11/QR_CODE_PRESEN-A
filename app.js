@@ -34,15 +34,15 @@ app.use("/api/users", userRoutes);
 
 // Rotas amigáveis 
 app.get("/confirmacao", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "confirma.html"));
+  res.sendFile(path.join(__dirname, "pages", "confirma.html"));
 });
 
 app.get("/leitura", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "leitura.html"));
+  res.sendFile(path.join(__dirname, "pages", "leitura.html"));
 });
 
 app.get("/relatorio", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "listagem.html"));
+  res.sendFile(path.join(__dirname, "pages", "listagem.html"));
 });
 
 

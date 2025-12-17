@@ -34,17 +34,22 @@ app.use("/api/users", userRoutes);
 
 // Rotas amigáveis 
 app.get("/confirmacao", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages", "confirma.html"));
+  res.sendFile(
+    path.join(__dirname, "api", "ui", "pages", "confirma.html")
+  );
 });
 
 app.get("/leitura", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages", "leitura.html"));
+  res.sendFile(
+    path.join(__dirname, "api", "ui", "pages", "leitura.html")
+  );
 });
 
 app.get("/relatorio", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages", "listagem.html"));
+  res.sendFile(
+    path.join(__dirname, "api", "ui", "pages", "listagem.html")
+  );
 });
-
 
 connectDB();
 
